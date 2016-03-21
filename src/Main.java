@@ -22,6 +22,9 @@ public class Main
 			case 3:
 			line();
 			break;
+			case 4:
+			d();
+			break;
 			default:
 			System.out.println("錯誤");
 			deb=1;
@@ -91,7 +94,8 @@ public class Main
 			calc=c(0)*c(3)+c(1)*c(4)+c(2)*c(5);
 			break;
 		}
-		System.out.println("外積="+calc);
+	    
+		System.out.println("內積="+calc);
 		System.out.println("---------------");
 		
 		
@@ -109,6 +113,20 @@ public class Main
 		System.out.println("---------------");
 	}
 	
+	public static void d()
+	{
+		//點到點距離
+		help();
+		for (int i=0;i<6;i++){
+			Number[i]=Scan.nextInt();
+		}
+		int dx,dy,dz;
+		dx=c(3)-c(0);
+		dy=c(4)-c(1);
+		dz=c(5)-c(2);
+		System.out.println("x="+dx+" y="+dy+" z="+dz);
+	}
+	
 	public static void help()
 	{
 		System.out.println("請輸入值，每個數字以\"enter\"隔開");
@@ -117,6 +135,6 @@ public class Main
 	{
 		System.out.println("v0.3.15");
 		System.out.println("請輸入模式");
-		System.out.println("1:內積，2:外積，3:三階行列式");
+		System.out.println("1:內積，2:外積，3:三階行列式，4:兩點距離");
 	}
 }
